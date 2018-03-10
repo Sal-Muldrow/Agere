@@ -18,19 +18,11 @@ import Card from "./src/Card.js"
 const { width } = Dimensions.get('window');
 
 const planets = [
-  { title: '12323', value: '123123', abbr: 'SU123123N' },
-  { title: 'Merc1234ury', value: 'mer454cury', abbr: 'M34qRC' },
-  { title: 'Suasdn', value: 'sdfdfun', abbr: 'SdfsdfUN' },
-  { title: 'Mezxczxcrcury', value: 'mervcbcvbcury', abbr: 'MzxcRC' },
-  { title: 'Suhhhn', value: 'shhhun', abbr: 'ShhUN' },
-  { title: 'Suaasdsdn', value: 'sasddfdfun', abbr: 'SdfsasddfUN' },
-  { title: 'Mezxcxxzxcrcury', value: 'mervcxxbcvbcury', abbr: 'MzxxxcRC' },
-  { title: 'Succhhhn', value: 'shcchhun', abbr: 'ScchhUN' },
-  { title: 'Mezxczbbxcrcury', value: 'mervcbbbcvbcury', abbr: 'MzbbxcRC' },
-  { title: 'Sunnhhhn', value: 'shhnnhun', abbr: 'ShhnnUN' },
-  { title: 'Suasnndn', value: 'sdnnfdfun', abbr: 'SdnnfsdfUN' },
-  { title: 'Mezxnnczxcrcury', value: 'mervcbcvbasdascnnury', abbr: 'MnnzxcRC' },
-  { title: 'Sunnhhhn', value: 'shhhnnun', abbr: 'ShnnhUN' },
+  { title: 'Work', value: '123123', abbr: 'SU123123N' },
+  { title: 'Home', value: 'mer454cury', abbr: 'M34qRC' },
+  { title: 'School', value: 'sdfdfun', abbr: 'SdfsdfUN' },
+  { title: 'New Category', value: 'mervcbcvbcury', abbr: 'MzxcRC' },
+
 
 
 ];
@@ -79,7 +71,7 @@ export default class App extends Component {
             renderItem={({ itemIndex, currentIndex, item, animatedValue }) => (
               <Card
 
-                planet={item}
+                task={planets[itemIndex].title}
                 index={itemIndex}
                 currentIndex={currentIndex}
                 animatedValue={animatedValue}

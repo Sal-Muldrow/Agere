@@ -8,21 +8,23 @@ export class Card extends Component {
   static WIDTH = 320;
   render() {
     return (
+      
       <View style={styles.viewStyle}>
-        <Text style={styles.bigblue}>YOYOYO</Text>
+        <Text style={styles.bigblue}>{this.props.task}</Text>
       </View>
     );
   }
 }
 const styles = StyleSheet.create({
   bigblue: {
-    color: 'white',
+    color: 'black',
     fontWeight: 'bold',
     fontSize: 30,
   },
   viewStyle: {
   backgroundColor: '#fff',
-  justifyContent: 'center',
+  justifyContent: 'flex-start',
+  alignItems: 'center',
 
   width: 300,
   shadowColor: '#000000',
