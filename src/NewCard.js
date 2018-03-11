@@ -1,24 +1,19 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Dimensions  } from 'react-native';
-import NewCard from './NewCard.js'
-import BasicCard from './BasicCard.js'
+
 //header component
 const { width: screenWidth } = Dimensions.get('window');
 const width = screenWidth - 50;
-export class Card extends Component {
+export class NewCard extends Component {
   static WIDTH = 320;
   render() {
-  return (this.displayJsxMessage());
-    }
 
-    displayJsxMessage() {
-        if (this.props.task == 'New Category') {
-            return <NewCard /> ;
-        } else {
+    return (
 
-            return  <BasicCard task={this.props.task} /> ;
-        }
-    }
+    <View style={styles.viewStyle}><Text style={styles.bigblue}>New Category</Text></View>
+
+    );
+  }
 }
 const styles = StyleSheet.create({
   bigblue: {
@@ -49,6 +44,6 @@ const styles = StyleSheet.create({
 });
 
 
-export default Card;
+export default NewCard;
 // skip this line if using Create React Native App
 //wow
